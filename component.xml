@@ -1,0 +1,131 @@
+<component>
+  <name>Controlador</name>
+  <package>trf.pontos12.application</package>
+  <singleton>true</singleton>
+  <abstract>false</abstract>
+  <dependency>freertos.kernel.FreeRTOSKernel</dependency>
+  <inheritance>trf.application.trfProduct</inheritance>
+  <options>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.cpu</id>
+      <name>CPU</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.hal.ICPU</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.sinalEmergencia</id>
+      <name>Sinal de Emergência</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.hal.IGPIOPin</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.keypad</id>
+      <name>Keypad (driver)</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.driver.IKeypad</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.display</id>
+      <name>Display (driver)</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.driver.ILCDDisplay</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.e2prom</id>
+      <name>E2PROM (driver)</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.driver.IDriverFlash</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.uart</id>
+      <name>UART</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.driver.IUARTDriver</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.relogio</id>
+      <name>relogio</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.service.Relogio</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.network</id>
+      <name>Network</name>
+      <dynamic>true</dynamic>
+      <componentType>trf.service.net.Network</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.idProtocol</id>
+      <name>ID Protocol</name>
+      <dynamic>true</dynamic>
+      <componentType>trf.service.net.IdentificationProtocol</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.fileSystem</id>
+      <name>File System</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.service.NandFFS</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.usbHost</id>
+      <name>USB Host</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.service.USBHost</componentType>
+    </component-option>
+    <component-option>
+      <id>trf.pontos12.application.Controlador.rs485</id>
+      <name>RS-485</name>
+      <dynamic>true</dynamic>
+      <componentType>escort.driver.IRS485Driver</componentType>
+    </component-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.tecladoBufferLength</id>
+      <name>teclado Buffer Length</name>
+      <dynamic>false</dynamic>
+      <dataType>U_BASE_TYPE</dataType>
+      <defaultValue>10</defaultValue>
+    </data-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.tecladoTaskStackSize</id>
+      <name>teclado Task Stack Size</name>
+      <dynamic>false</dynamic>
+      <dataType>U_BASE_TYPE</dataType>
+      <defaultValue>256</defaultValue>
+    </data-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.tecladoTaskPriority</id>
+      <name>teclado Task Priority</name>
+      <dynamic>false</dynamic>
+      <dataType>U_BASE_TYPE</dataType>
+      <defaultValue>2</defaultValue>
+    </data-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.displayStartupMessage</id>
+      <name>display Startup Message</name>
+      <dynamic>false</dynamic>
+      <dataType>char *</dataType>
+      <defaultValue>&quot; trf TECNOLOGIA    ELETRONICA   &quot;</defaultValue>
+    </data-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.GUItaskStackSize</id>
+      <name>GUI task Stack Size</name>
+      <dynamic>false</dynamic>
+      <dataType>U_BASE_TYPE</dataType>
+      <defaultValue>256</defaultValue>
+    </data-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.GUItaskPriority</id>
+      <name>GUI task Priority</name>
+      <dynamic>false</dynamic>
+      <dataType>U_BASE_TYPE</dataType>
+      <defaultValue>1</defaultValue>
+    </data-option>
+    <data-option>
+      <id>trf.pontos12.application.Controlador.monitoramentoTaskPriority</id>
+      <name>Monitoramento Task Priority</name>
+      <dynamic>false</dynamic>
+      <dataType>U_BASE_TYPE</dataType>
+      <defaultValue>1</defaultValue>
+    </data-option>
+  </options>
+</component>
